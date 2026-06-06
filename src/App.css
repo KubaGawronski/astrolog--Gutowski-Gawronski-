@@ -18,14 +18,14 @@ body {
 }
 
 .header {
-  height: 80px;
+  height: 100px;
 
   background-color: #16151a;
 
   border: 2px solid #302f34;
   border-radius: 8px;
 
-  margin: 12px;
+  margin: 12px 12px 0 12px;
   padding: 12px 20px;
 
   display: flex;
@@ -113,5 +113,5 @@ body {
 
 .main-content {
   flex: 1;
-  padding: 20px;
+  padding: 20px 20px 20px 12px;
 }
