@@ -1,6 +1,15 @@
 import { useState } from "react";
+import type { AstroObject } from "../types/AstroObject";
 
-function AddObjectForm() {
+interface AddObjectFormProps {
+    onAddObject: (
+        objectData: Omit<AstroObject, "id">
+    ) => void;
+}
+
+function AddObjectForm({
+                           onAddObject,
+                       }: AddObjectFormProps) {
     const [name, setName] = useState("");
     const [type, setType] = useState("");
     const [distance, setDistance] = useState("");
@@ -9,7 +18,7 @@ function AddObjectForm() {
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
 
-        console.log({
+        onAddObject({
             name,
             type,
             distance,
