@@ -12,6 +12,20 @@ function App() {
     const [objects, setObjects] =
         useState<AstroObject[]>(initialObjects);
 
+    const handleAddObject = (
+        objectData: Omit<AstroObject, "id">
+    ) => {
+        const newObject: AstroObject = {
+            id: Date.now(),
+            ...objectData,
+        };
+
+        setObjects((prevObjects) => [
+            ...prevObjects,
+            newObject,
+        ]);
+    };
+
     const [selectedObject, setSelectedObject] =
         useState<AstroObject | null>(null);
 
@@ -36,7 +50,9 @@ function App() {
                     selectedObject={selectedObject}
                 />
 
-                <AddObjectForm />
+                <AddObjectForm
+                    onAddObject={handleAddObject}
+                />
             </main>
         </div>
     );
