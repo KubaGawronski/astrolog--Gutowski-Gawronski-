@@ -47,12 +47,12 @@ Zanim napiszecie pierwszą linijkę kodu, zaplanujcie pracę! Programowanie bez 
 
 Aby projekt został zaliczony, musi spełniać poniższe kryteria techniczne:
 
-- [ ] **Komponenty:** Podział aplikacji na minimum 4 logiczne komponenty (np. `App`, `CatalogList`, `ObjectDetails`, `DiscoveryForm`).
-- [ ] **Stan (`useState`):** Przechowywanie w stanie: głównej tablicy obiektów, aktualnie wybranego obiektu do podglądu oraz danych z formularza (kontrolowane inputy).
-- [ ] **Przekazywanie Danych (Props):** Prawidłowa komunikacja między komponentami. Formularz musi potrafić wysłać dane w górę do rodzica!
-- [ ] **Renderowanie List:** Użycie metody `.map()` do wyświetlenia listy planet/gwiazd. Wymagany atrybut `key`.
-- [ ] **Renderowanie Warunkowe:** Użycie operatorów `&&` lub `? :` do wyświetlania panelu szczegółów (lub komunikatu "Wybierz obiekt", jeśli nic nie kliknięto).
-- [ ] **Niemutowalność Stanu:** Prawidłowe dodawanie nowych elementów do tablicy z użyciem operatora *spread* (`...`). Brak bezpośredniej mutacji (zakaz używania `.push()`).
+- [x] **Komponenty:** Podział aplikacji na minimum 4 logiczne komponenty (np. `App`, `CatalogList`, `ObjectDetails`, `DiscoveryForm`).
+- [x] **Stan (`useState`):** Przechowywanie w stanie: głównej tablicy obiektów, aktualnie wybranego obiektu do podglądu oraz danych z formularza (kontrolowane inputy).
+- [x] **Przekazywanie Danych (Props):** Prawidłowa komunikacja między komponentami. Formularz musi potrafić wysłać dane w górę do rodzica!
+- [x] **Renderowanie List:** Użycie metody `.map()` do wyświetlenia listy planet/gwiazd. Wymagany atrybut `key`.
+- [x] **Renderowanie Warunkowe:** Użycie operatorów `&&` lub `? :` do wyświetlania panelu szczegółów (lub komunikatu "Wybierz obiekt", jeśli nic nie kliknięto).
+- [x] **Niemutowalność Stanu:** Prawidłowe dodawanie nowych elementów do tablicy z użyciem operatora *spread* (`...`). Brak bezpośredniej mutacji (zakaz używania `.push()`).
 
 ---
 
