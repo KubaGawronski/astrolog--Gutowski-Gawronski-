@@ -3,6 +3,7 @@ import "./App.css";
 
 import ObjectList from "./components/ObjectList";
 import ObjectDetails from "./components/ObjectDetails";
+import AddObjectForm from "./components/AddObjectForm";
 
 import { initialObjects } from "./data/initialObjects";
 import type { AstroObject } from "./types/AstroObject";
@@ -35,6 +36,7 @@ function App() {
                     selectedObject={selectedObject}
                 />
 
+                <AddObjectForm />
             </main>
         </div>
     );
