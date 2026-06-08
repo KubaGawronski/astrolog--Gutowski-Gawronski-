@@ -3,6 +3,7 @@ import "./App.css";
 
 import ObjectList from "./components/ObjectList";
 import ObjectDetails from "./components/ObjectDetails";
+import AddObjectForm from "./components/AddObjectForm";
 
 import { initialObjects } from "./data/initialObjects";
 import type { AstroObject } from "./types/AstroObject";
@@ -10,6 +11,20 @@ import type { AstroObject } from "./types/AstroObject";
 function App() {
     const [objects, setObjects] =
         useState<AstroObject[]>(initialObjects);
+
+    const handleAddObject = (
+        objectData: Omit<AstroObject, "id">
+    ) => {
+        const newObject: AstroObject = {
+            id: Date.now(),
+            ...objectData,
+        };
+
+        setObjects((prevObjects) => [
+            ...prevObjects,
+            newObject,
+        ]);
+    };
 
     const [selectedObject, setSelectedObject] =
         useState<AstroObject | null>(null);
@@ -35,6 +50,9 @@ function App() {
                     selectedObject={selectedObject}
                 />
 
+                <AddObjectForm
+                    onAddObject={handleAddObject}
+                />
             </main>
         </div>
     );
